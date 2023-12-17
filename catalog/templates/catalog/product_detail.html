@@ -1,0 +1,20 @@
+{% extends 'catalog/base.html' %}
+{% load mediapath %}
+{% block content %}
+<div class="container">
+    <h1 class="display-4 text-center my-5">{{ product.name }}</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ product.image|mediapath }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">Цена: {{ product.price }} руб.</p>
+                    <!-- Другая информация о товаре -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
